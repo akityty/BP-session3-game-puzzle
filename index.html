@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Puzzle</title>
+    <style>
+    </style>
+</head>
+<body>
+<button type="button"onclick="show1()"><img src="animal/panda/1.png" id="hinh1" width="250" height="100"/></button>
+    <br>
+<button type="button"onclick="show2()"><img src="animal/cat/2.png" id="hinh2" width="250" height="100"/></button>
+    <br>
+    <button type="button"onclick="show3()"><img src="animal/panda/3.png" id="hinh3"width="250" height="100"/></button>
+    <br>
+        <button type="button"onclick="show4()"> <img src="animal/monkey/4.png" id="hinh4"width="250" height="100"/></button>
+    <br>
+            <button type="button" onclick="show5()"> <img src="animal/panda/5.png" id="hinh5"width="250" height="100"/></button>
+<br>
+<p id =  "message"></p>
+<script>
+let hinhpanda1 = "http://localhost:63342/BP-session3-game-puzzle/animal/panda/1.png";
+let hinhpanda2 = "http://localhost:63342/BP-session3-game-puzzle/animal/panda/2.png";
+let hinhpanda3 = "http://localhost:63342/BP-session3-game-puzzle/animal/panda/3.png";
+let hinhpanda4 = "http://localhost:63342/BP-session3-game-puzzle/animal/panda/4.png";
+let hinhpanda5 = "http://localhost:63342/BP-session3-game-puzzle/animal/panda/5.png"
+let hinhcat1 = "http://localhost:63342/BP-session3-game-puzzle/animal/cat/1.png";
+let hinhcat2 = "http://localhost:63342/BP-session3-game-puzzle/animal/cat/2.png";
+let hinhcat3 = "http://localhost:63342/BP-session3-game-puzzle/animal/cat/3.png";
+let hinhcat4 = "http://localhost:63342/BP-session3-game-puzzle/animal/cat/4.png";
+let hinhcat5 = "http://localhost:63342/BP-session3-game-puzzle/animal/cat/5.png";
+let hinhmonkey1 = "http://localhost:63342/BP-session3-game-puzzle/animal/monkey/1.png";
+let hinhmonkey2 = "http://localhost:63342/BP-session3-game-puzzle/animal/monkey/2.png";
+let hinhmonkey3 = "http://localhost:63342/BP-session3-game-puzzle/animal/monkey/3.png";
+let hinhmonkey4 = "http://localhost:63342/BP-session3-game-puzzle/animal/monkey/4.png";
+let hinhmonkey5 = "http://localhost:63342/BP-session3-game-puzzle/animal/monkey/5.png";
+    function show1() {
+        if(document.getElementById("hinh1").src === hinhpanda1)
+        {
+            document.getElementById("hinh1").src = hinhcat1;
+        }
+        else if(document.getElementById("hinh1").src === hinhcat1){
+            document.getElementById("hinh1").src = hinhmonkey1;
+        }
+        else if(document.getElementById("hinh1").src === hinhmonkey1){
+            document.getElementById("hinh1").src = hinhpanda1;
+        }
+        effect();
+    }
+function show2() {
+    if(document.getElementById("hinh2").src === hinhpanda2)
+    {
+        document.getElementById("hinh2").src = hinhcat2;
+    }
+    else if(document.getElementById("hinh2").src === hinhcat2){
+        document.getElementById("hinh2").src = hinhmonkey2;
+    }
+    else if(document.getElementById("hinh2").src === hinhmonkey2){
+        document.getElementById("hinh2").src = hinhpanda2;
+    }
+    effect();
+
+
+}
+function show3() {
+    if(document.getElementById("hinh3").src === hinhpanda3)
+    {
+        document.getElementById("hinh3").src = hinhcat3;
+    }
+    else if(document.getElementById("hinh3").src === hinhcat3){
+        document.getElementById("hinh3").src = hinhmonkey3;
+    }
+    else if(document.getElementById("hinh3").src === hinhmonkey3){
+        document.getElementById("hinh3").src = hinhpanda3;
+    }
+    effect();
+
+
+}
+function show4() {
+    if(document.getElementById("hinh4").src === hinhpanda4)
+    {
+        document.getElementById("hinh4").src = hinhcat4;
+    }
+    else if(document.getElementById("hinh4").src === hinhcat4){
+        document.getElementById("hinh4").src = hinhmonkey4;
+    }
+    else if(document.getElementById("hinh4").src === hinhmonkey4){
+        document.getElementById("hinh4").src = hinhpanda4;
+    }
+    effect();
+
+
+}
+function show5() {
+    if(document.getElementById("hinh5").src === hinhpanda5)
+    {
+        document.getElementById("hinh5").src = hinhcat5;
+    }
+    else if(document.getElementById("hinh5").src === hinhcat5){
+        document.getElementById("hinh5").src = hinhmonkey5;
+    }
+    else if(document.getElementById("hinh5").src === hinhmonkey5){
+        document.getElementById("hinh5").src = hinhpanda5;
+    }
+    effect();
+
+
+}
+
+    function effect() {
+        if(    (document.getElementById("hinh1").src == hinhpanda1)
+            && (document.getElementById("hinh2").src == hinhpanda2)
+            && (document.getElementById("hinh3").src == hinhpanda3)
+            && (document.getElementById("hinh4").src == hinhpanda4)
+            && (document.getElementById("hinh5").src == hinhpanda5)){
+            document.getElementById("message").innerText = "XẾP ĐÚNG RỒI";
+        }
+        if(    (document.getElementById("hinh1").src == hinhcat1)
+            && (document.getElementById("hinh2").src == hinhcat2)
+            && (document.getElementById("hinh3").src == hinhcat3)
+            && (document.getElementById("hinh4").src == hinhcat4)
+            && (document.getElementById("hinh5").src == hinhcat5)){
+            document.getElementById("message").innerText = "XẾP ĐÚNG RỒI";
+        }
+        if(    (document.getElementById("hinh1").src == hinhmonkey1)
+            && (document.getElementById("hinh2").src == hinhmonkey2)
+            && (document.getElementById("hinh3").src == hinhmonkey3)
+            && (document.getElementById("hinh4").src == hinhmonkey4)
+            && (document.getElementById("hinh5").src == hinhmonkey5)){
+            document.getElementById("message").innerText = "XẾP ĐÚNG RỒI";
+        }
+
+    }
+</script>
+</body>
+
+</html>
